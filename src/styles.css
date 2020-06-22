@@ -1,0 +1,36 @@
+/* Add application styles & imports to this file! */
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+mat-sidenav {
+    width: 250px;
+    padding: 10px;
+}
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+    height: 100%;
+}
+.mat-nav-list .mat-list-item-content {
+    font-size:15px;
+}
+.top-header {
+    justify-content:space-between;
+}
+.nav-tool-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.logo {
+    margin-left: 5px;
+}
+.sidenav-container .mat-icon {
+    margin-right: 5px;;
+}
+.mat-list-item.active {
+    background-color: rgba(0,0, 0, 0.2);
+}
+.mat-sidenav-content {
+    padding: 25px 40px 0;
+}
