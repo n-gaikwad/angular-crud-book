@@ -1,3 +1,58 @@
-<p>
-add-book works!
-</p>
+<mat-card class="add-form">
+    <mat-card-header>
+        <mat-card-title><h1 class="mat-h1">Add Book</h1></mat-card-title>
+    </mat-card-header>
+    <mat-divider fxFlex=" 1 0 "></mat-divider>
+</mat-card>
+<!-- Form -->
+<div class="inner-wrraper">
+    <form [formGroup]="bookForm" (ngSubmit)="AddBook()" class="add-book-form"  >
+        <mat-card>
+            <div class="form-field">
+                <mat-form-field appearance="outline" class="book-form-input">
+                    <mat-label>Book Name: </mat-label>
+                    <input matInput placeholder="Add Book Name" formControlName="book_name" >
+                    <mat-error *ngIf="bookForm.controls.book_name.required">
+                        Book Name is required.    
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="form-field">
+                <mat-form-field appearance="outline" class="book-form-input">
+                    <mat-label>Author Name:</mat-label>
+                    <input matInput placeholder="Add Author Name " formControlName="author_name">
+                    <mat-error *ngIf="bookForm.controls.author_name.required">
+                        Author Name is required.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="form-field">
+                <mat-form-field>
+                    <mat-chip-list #chipList>
+                        <mat-chip *ngFor="let language of languageArr" [selectable]="selectable" [removeable]="removeable" (removed)="remove(language)" >
+                            {{ language.name | titlecase }}
+                            <mat-icon matChipRemove *ngIf="removeable">cancel</mat-icon>
+                        </mat-chip>
+                        <input [matChipInputFor]="chipList" placeholder="Add Languages" 
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes" 
+                        (matChipInputTokenEnd)="add($event)" [matChipInputAddOnBlur]="addOnBlur">
+                    </mat-chip-list>
+                </mat-form-field> 
+            </div>
+            <div class="form-field">
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker" placeholder="Book Publication Date" formControlName="publication_date">
+                    <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+                    <mat-datepicker #picker ></mat-datepicker>
+                    <mat-error *ngIf="bookForm.controls.publication_date.required" >Please Select Date</mat-error>
+                </mat-form-field>
+            </div>
+        </mat-card>
+        <mat-card>
+            <div class="container">
+                <button mat-flat-button color="warn" class="submit-btn" >Submit</button>
+                <button mat-flat-button color="primary" (click)="resestForm()" >Reset Form</button>
+            </div>
+        </mat-card>
+    </form>
+</div>

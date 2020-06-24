@@ -1,0 +1,12 @@
+.form-field {
+    padding: 10px 0;
+}
+.mat-form-field {
+    width: 50%;
+}
+.add-book-form {
+    margin-top: 25px;
+}
+.submit-btn {
+    margin-right: 5px;
+}
