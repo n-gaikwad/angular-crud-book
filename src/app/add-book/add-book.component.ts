@@ -2,8 +2,11 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { COMMA,ENTER } from '@angular/cdk/keycodes';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Language } from '../book';
+//import { Language } from '../book';
 //import { Language } from 'src/app/book';
+export interface Language {
+    name : string;
+}
 @Component({
   selector: 'app-add-book',
   templateUrl: './add-book.component.html',

@@ -7,13 +7,14 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { BookService } from './book.service';
 import { AddBookComponent } from './add-book/add-book.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { EditBookComponent } from './edit-book/edit-book.component';
+import { AppRoutingModule } from './app-routing.module';
+import { BookService } from './book.service';
 
 @NgModule({
-  imports:[ BrowserModule, FormsModule ,BrowserAnimationsModule, MaterialModule ],
+  imports:[ BrowserModule, AppRoutingModule ,FormsModule ,BrowserAnimationsModule, MaterialModule ],
   declarations: [ AppComponent, BookListComponent, EditBookComponent ],
   providers: [BookService],
   bootstrap: [ AppComponent ],
