@@ -14,7 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BookService } from './book.service';
 
 @NgModule({
-  imports:[ BrowserModule, AppRoutingModule ,FormsModule,ReactiveFormsModule ,BrowserAnimationsModule, MaterialModule ],
+  imports:[ BrowserModule,BrowserAnimationsModule, MaterialModule, AppRoutingModule ,FormsModule,ReactiveFormsModule  ],
   declarations: [ AppComponent,AddBookComponent, BookListComponent, EditBookComponent ],
   providers: [BookService],
   bootstrap: [ AppComponent ],

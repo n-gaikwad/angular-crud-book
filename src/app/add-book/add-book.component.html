@@ -12,7 +12,7 @@
                 <mat-form-field appearance="outline" class="book-form-input">
                     <mat-label>Book Name: </mat-label>
                     <input matInput placeholder="Add Book Name" formControlName="book_name" >
-                    <mat-error *ngIf="bookForm.controls.book_name.required">
+                    <mat-error *ngIf="bookForm.controls.book_name.errors.required">
                         Book Name is required.    
                     </mat-error>
                 </mat-form-field>
@@ -21,7 +21,7 @@
                 <mat-form-field appearance="outline" class="book-form-input">
                     <mat-label>Author Name:</mat-label>
                     <input matInput placeholder="Add Author Name " formControlName="author_name">
-                    <mat-error *ngIf="bookForm.controls.author_name.required">
+                    <mat-error *ngIf="bookForm.controls.author_name.errors.required">
                         Author Name is required.
                     </mat-error>
                 </mat-form-field>
@@ -44,7 +44,7 @@
                     <input matInput [matDatepicker]="picker" placeholder="Book Publication Date" formControlName="publication_date">
                     <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
                     <mat-datepicker #picker ></mat-datepicker>
-                    <mat-error *ngIf="bookForm.controls.publication_date.required" >Please Select Date</mat-error>
+                    <mat-error *ngIf="bookForm.controls.publication_date.errors.required" >Please Select Date</mat-error>
                 </mat-form-field>
             </div>
         </mat-card>
