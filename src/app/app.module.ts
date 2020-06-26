@@ -15,7 +15,7 @@ import { BookService } from './book.service';
 
 @NgModule({
   imports:[ BrowserModule, AppRoutingModule ,FormsModule,ReactiveFormsModule ,BrowserAnimationsModule, MaterialModule ],
-  declarations: [ AppComponent, BookListComponent, EditBookComponent ],
+  declarations: [ AppComponent,AddBookComponent, BookListComponent, EditBookComponent ],
   providers: [BookService],
   bootstrap: [ AppComponent ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
