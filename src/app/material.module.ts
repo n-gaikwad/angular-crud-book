@@ -17,6 +17,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
     imports: [
@@ -30,7 +31,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
         MatFormFieldModule,
         MatSelectModule,
         MatRadioModule,
-        
+        MatCardModule,
         MatNativeDateModule,
         MatChipsModule,
         MatTooltipModule,
@@ -50,7 +51,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
         MatNativeDateModule,
         MatChipsModule,
         MatTooltipModule,
-        
+        MatCardModule,
         MatPaginatorModule
     ],
     providers: [

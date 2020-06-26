@@ -37,7 +37,7 @@ export class AddBookComponent implements OnInit {
     });
   }
 
-  add(event: MatChipInputEvent) : void {
+  add(event) : void {
     const input = event.input;
     const value = event.value;
     console.log(input.value)
@@ -50,9 +50,18 @@ export class AddBookComponent implements OnInit {
   }
 
   remove(langArr: Language): void {
-    const index = this.languageArr.indexOf(langArr)
+    const index = this.languageArr.indexOf(langArr);
+    if(index > 0) {
+      this.languageArr.splice(index,1);
+    }
   }
 
+  AddBook() {
+    if(this.bookForm.valid) {
+      console.log(this.bookForm.value);
+      this.resetForm();
+    }
+  }
   resetForm() {
     this.languageArr = [];
     this.bookForm.reset();
