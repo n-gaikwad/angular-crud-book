@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { COMMA,ENTER } from '@angular/cdk/keycodes';
-import { BookService } from '../book.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Language } from '../book';
+//import { Language } from 'src/app/book';
 @Component({
   selector: 'app-add-book',
   templateUrl: './add-book.component.html',
@@ -19,7 +19,7 @@ export class AddBookComponent implements OnInit {
   @ViewChild('chipList',{static:false}) chipList;
   @ViewChild('resetBookForm',{static: false}) myNgForm;
   readonly separatorKeysCodes: number[] = [ENTER,COMMA];
-  constructor(private fb: FormBuilder, private bookService: BookService ) { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
     this.createForm();
