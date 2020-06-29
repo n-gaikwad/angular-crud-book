@@ -57,7 +57,7 @@ import { MatCardModule } from '@angular/material/card';
         MatPaginatorModule
     ],
     providers: [
-        
+        MatDatepickerModule
     ]
 })
 export class MaterialModule {
