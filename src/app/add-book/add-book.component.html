@@ -42,7 +42,9 @@
             <div class="form-field">
                 <mat-form-field>
                     <input matInput [matDatepicker]="picker" placeholder="Book Publication Date" formControlName="publication_date">
-                    <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+                    <mat-datepicker-toggle matSuffix [for]="picker" >
+                      <mat-icon matDatepickerToggleIcon>settings</mat-icon>
+                    </mat-datepicker-toggle>
                     <mat-datepicker #picker ></mat-datepicker>
                     <mat-error *ngIf="bookForm.controls.publication_date.errors.required" >Please Select Date</mat-error>
                 </mat-form-field>

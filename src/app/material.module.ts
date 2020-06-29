@@ -49,11 +49,11 @@ import { MatCardModule } from '@angular/material/card';
         MatInputModule,
         MatSelectModule,
         MatRadioModule,
-        MatDatepickerModule,
-        MatNativeDateModule,
         MatChipsModule,
         MatTooltipModule,
         MatCardModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
         MatPaginatorModule
     ],
     providers: [
