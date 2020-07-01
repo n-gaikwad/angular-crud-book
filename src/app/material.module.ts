@@ -32,7 +32,6 @@ import { MatCardModule } from '@angular/material/card';
         MatSelectModule,
         MatRadioModule,
         MatCardModule,
-        MatDatepickerModule,
         MatNativeDateModule,
         MatChipsModule,
         MatTooltipModule,
@@ -51,14 +50,11 @@ import { MatCardModule } from '@angular/material/card';
         MatRadioModule,
         MatChipsModule,
         MatTooltipModule,
-        MatCardModule,
-        MatDatepickerModule,
-        MatNativeDateModule,
-        MatPaginatorModule
+        MatCardModule,       
+        MatPaginatorModule 
     ],
     providers: [
-        MatDatepickerModule
-    ]
+        ]
 })
 export class MaterialModule {
 

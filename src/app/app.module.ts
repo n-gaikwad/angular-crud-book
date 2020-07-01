@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule , CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 
@@ -14,10 +15,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { BookService } from './book.service';
 
 @NgModule({
-  imports:[ BrowserModule,BrowserAnimationsModule, MaterialModule, AppRoutingModule ,FormsModule,ReactiveFormsModule  ],
+  imports:[ BrowserModule,BrowserAnimationsModule, AppRoutingModule ,FormsModule,ReactiveFormsModule,MaterialModule ,MatDatepickerModule ],
   declarations: [ AppComponent,AddBookComponent, BookListComponent, EditBookComponent ],
-  providers: [BookService],
+  providers: [BookService,MatDatepickerModule],
   bootstrap: [ AppComponent ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }
